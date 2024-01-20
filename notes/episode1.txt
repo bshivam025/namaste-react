@@ -1,2 +1,23 @@
 Q1. what is CDN ?
 Ans:  Content Delivery Network  is a distributed network of servers that work together to deliver web content, such as images, stylesheets, scripts, and videos, to users based on their geographical location.
+Q2. React Philosophy?
+Ans: Do everything using js.
+Q3. Why is React a Library ?
+Ans: Because it can be applied to a part of code instead of the whole project, that is also the difference between library and framework i.e framework sets the architechture for the whole project/ codebase while react is a helper which is a library and can be used on a smaller part of the code without affecting the rest of the already written code.
+Q4. What is Emmet?
+Ans: It provides a shorthand syntax for quickly creating and expanding code snippets
+Q5. Difference between a Library and Framework?
+Ans: Framework: It is used to define the architechture of the whole project WHile Library Can be used as a support or helper and it can be used on just a part of the project.
+Q5. What is CDN? Why do we use it?
+Ans: Q1 + It is used for load balancing wrt the geological location around the whole world.
+Q6. Why is react known as React?
+Ans: React is known as react for its reactive programming. Reactive programming means changing data dynamincally therefore it means only that part needs to render/ reload again which has changed while other part of the code stays the same due to this the page does not need to be rendered again as a whole which saves time.
+Q6. Async VS differ?
+Ans: async: Loads the script asynchronously, allowing HTML parsing to continue, and executes it as soon as it's downloaded. Useful for non-essential scripts.
+
+defer: Defers script execution until HTML parsing is complete, ensuring scripts are executed in order before the DOMContentLoaded event. Useful for scripts dependent on HTML structure.
+
+Example: If you have multiple scripts, like script1.js and script2.js, and you want them executed in a specific order, use defer to maintain sequence: <script defer src="script1.js"></script> <script defer src="script2.js"></script>.
+
+
+// EP 1 ends here date = 20 Jan 2024 
