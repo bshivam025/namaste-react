@@ -1,0 +1,2 @@
+Q1. what is CDN ?
+Ans:  Content Delivery Network  is a distributed network of servers that work together to deliver web content, such as images, stylesheets, scripts, and videos, to users based on their geographical location.

@@ -1,0 +1,17 @@
+// This file will be used for storing the built in functions of react and their definations
+
+1. createElement(
+    'h1',
+    { className: 'greeting' },
+    'Hello'
+  );
+
+  // createElement( 'h1', { className: 'greeting' }, 'Hello' ); => this will create a h1 element and its inner html will be changes to hello.
+
+2. React.createRoot(document.getElementById('secondary-root')) 
+  createRoot() => The createRoot function is a way to establish a new root in your tree. It's like saying, "Hey, I want to start a new section of my app from here. This is used to establish the starting of a app".It is used with root.render.
+3. render() => 
+ -describes what the component should look like using JSX.
+
+
+
