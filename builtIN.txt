@@ -13,6 +13,7 @@
 3. render() => 
  -describes what the component should look like using JSX.
  -converts the h1 tag and puts it as a element in the html page
+ -used as root.render(React.createElement('h1', null, 'Hello World'))
 
 
 

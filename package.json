@@ -2,13 +2,13 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "This is namaste react course by akshay saini",
-  "main": "index.js",
   "scripts": {
+    "start": "parcel ./html/index1.html",
+    "build": "parcel build ./html/index1.html",
+    "buildstart": "parcel build ./html/index1.html && serve dist",
     "test": "jest"
   },
-  "keywords": [
-    "namaste"
-  ],
+  "keywords": [],
   "author": "Shivam Bhardwaj",
   "license": "ISC",
   "devDependencies": {
