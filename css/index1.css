@@ -1,3 +1,193 @@
 #heading1 {
     color: red;
 }
+
+/* Swagiee begins */
+/* CSS for Header Component */
+.header {
+    background-color: #FFA500; /* Orange background color */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-family: 'Arial', sans-serif; /* Choose an appropriate font family */
+    font-size: 16px; /* Adjust the font size */
+    color: #333; /* Choose a suitable text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 20px 0; /* Add padding for spacing */
+    text-transform: uppercase; /* Transform text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow for depth */
+}
+
+.header-title h1 {
+    margin: 0; /* Remove default margin */
+}
+
+.header-logo img {
+    max-width: 200px; /* Adjusted width */
+    height: auto;
+}
+
+.nav-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #fff; /* White text color */
+    font-weight: bold;
+}
+
+/* CSS for Restaurant Card */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Ensure full-height display */
+/* Ensure full-height display */
+.restaurant-body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search bar styles */
+.search-bar {
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Restaurant card styles */
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Adjust justification */
+    padding: 50px;
+    gap: 40px; /* Ensure gap between cards */
+
+}
+
+.restaurant-card {
+    width: calc((100% - 60px) / 5); /* Calculate width with 20px gap between each card */
+    max-width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card .green {
+    color: green;
+}
+.restaurant-card .red {
+    color: red;
+}
+.restaurant-card .orange {
+    color: orange;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 200;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.restaurant-info {
+    padding: 10px;
+}
+
+.restaurant-name h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.restaurant-cuisines h4,
+.restaurant-rating h4,
+.restaurant-delivery-time h4 {
+    margin-bottom: 5px;
+    color: #777;
+}
+
+.restaurant-rating h4 {
+    color: green; /* Green color for rating */
+}
+
+
+.top-rating-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition duration */
+    margin-left: 20px; /* Add margin */
+    margin-top: 10px; /* Add margin */
+  }
+  
+  /* On hover */
+  .top-rating-button:hover {
+    background-color: #45a049; /* Darker green */
+    color: white; /* White text */
+  }
+
+  .white {
+    background-color: whitesmoke;
+    color: #000; /* White text */
+
+  }
+  .top-rating-button.white:hover {
+    background-color: #000; /* Darker green */
+    color: white; /* White text */
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar h4 {
+    margin-right: 10px;
+  }
+  
+  #search-bar-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    outline: none;
+  }
+  
+  #search-bar-input::placeholder {
+    color: #999;
+  }
+/* Swagiee ends */

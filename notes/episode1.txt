@@ -18,6 +18,11 @@ Ans: async: Loads the script asynchronously, allowing HTML parsing to continue, 
 defer: Defers script execution until HTML parsing is complete, ensuring scripts are executed in order before the DOMContentLoaded event. Useful for scripts dependent on HTML structure.
 
 Example: If you have multiple scripts, like script1.js and script2.js, and you want them executed in a specific order, use defer to maintain sequence: <script defer src="script1.js"></script> <script defer src="script2.js"></script>.
+Q7. Anything we do from React can be done from basic HTML, CSS, JS? Then why use React?
+Ans: Yes, anything we do from React can be done from basic HTML, CSS, JS. But React makes it easier to manage the code. It makes the code more readable and maintainable. It makes the code more modular and reusable. It makes the code more efficient and scalable. It makes the code more performant and reliable.
+IT MAKES YOUR DEVELOPER EXPERIENCE EASY. 
+Q8. What extensions do you use to make react files?
+Ans: We can use .jsx or .js for react files. They are exactly the same , there is no difference between how they work. It is just a matter of preference. 
 
 
 // EP 1 ends here date = 20 Jan 2024 

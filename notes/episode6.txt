@@ -1,0 +1,27 @@
+Q1. What is the difference between Monolith and Microservices architecture?
+Ans: 
+#1. Monolith Architecture: 
+- Monolith is a single large unit where all the software components are interconnected and interdependent. 
+- it has a single codebase.
+- same repository for all the developers.
+#2. Microservices Architecture:
+- We have different services for different components of the application.
+- Each service has its own codebase.
+- all these services combined together to form a complete application.
+- separate UI, business logic, and data storage.
+- single responsibility principle.
+- advantage: you can use different technologies for different services. ex. one service can be in Java, another in Python, etc.
+
+Q2. How do different services interact with each other in Microservices architecture?
+Ans: Like how does backend talk to UI or how does one service talk to another service? So our React app is a UI service.
+- All these services run on their own port.
+- So, when we want to talk to another service, we make an HTTP request to that service.
+
+Q3. What is a port?
+Ans: A port is a communication endpoint. It is used to identify a particular process or a type of network service. Each port is associated with a specific process or service.
+
+Q4. How is a server related to a port?
+Ans: A server is a computer program or a device that provides functionality for other programs or devices, called clients. This architecture is called the client-server model. A server is a process that is running on a computer and listens for requests from clients. When a request comes in, the server processes the request and sends a response back to the client. The server listens on a specific port for incoming requests.
+
+Q5. What is a HTTP request?
+Ans: HTTP stands for Hypertext Transfer Protocol. It is an application layer protocol that is used for transmitting hypermedia documents, such as HTML. HTTP is the foundation of data communication for the World Wide Web. It is a request-response protocol. A client sends a request to the server and the server sends a response back to the client.
