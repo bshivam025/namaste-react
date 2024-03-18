@@ -16,13 +16,29 @@ Q6. Async VS differ?
 Ans: async: Loads the script asynchronously, allowing HTML parsing to continue, and executes it as soon as it's downloaded. Useful for non-essential scripts.
 
 defer: Defers script execution until HTML parsing is complete, ensuring scripts are executed in order before the DOMContentLoaded event. Useful for scripts dependent on HTML structure.
-
+    
 Example: If you have multiple scripts, like script1.js and script2.js, and you want them executed in a specific order, use defer to maintain sequence: <script defer src="script1.js"></script> <script defer src="script2.js"></script>.
 Q7. Anything we do from React can be done from basic HTML, CSS, JS? Then why use React?
 Ans: Yes, anything we do from React can be done from basic HTML, CSS, JS. But React makes it easier to manage the code. It makes the code more readable and maintainable. It makes the code more modular and reusable. It makes the code more efficient and scalable. It makes the code more performant and reliable.
 IT MAKES YOUR DEVELOPER EXPERIENCE EASY. 
 Q8. What extensions do you use to make react files?
 Ans: We can use .jsx or .js for react files. They are exactly the same , there is no difference between how they work. It is just a matter of preference. 
-
+Q9. Costiest operation in a web application?
+Ans: DOM Manipulation, React comes with a Philosophy that it does everything using js.
+Q10. Create a <h1> tag using HTML/JS/React?
+Ans: 
+HTML: <h1> Hello World </h1>
+JS: document.createElement('h1').innerText = 'Hello World'
+React:
+    let root = document.getElementById('root');
+    root = ReactDOM.createRoot(root);
+    let h1 = React.createElement('h1',{},'Hello World');
+    root.render(h1); 
+Q11. What is the difference between React.createElement and ReactDOM.render?
+Ans: React.createElement is used to create a new element while ReactDOM.render is used to render the element on the screen.
+Q12. What is React.createElement?
+Ans: It is used to create a new element. It takes 3 arguments. 1st is the type of the element, 2nd is the props of the element and 3rd is the children of the element. It can be used to create a nested element as well. for example for creating a div with a p inside it, we can use React.createElement('div',{},React.createElement('p',{},'Hello World'))
 
 // EP 1 ends here date = 20 Jan 2024 
+
+A person who is not curious is not a good developer. 
