@@ -1,8 +1,10 @@
+import {HEADER_IMG_URL} from '../config/config';
+
 let Header = () => {
     return (
         <div className = 'header'>
             <div className = 'header-logo'>
-                <img src = 'https://static.vecteezy.com/system/resources/previews/004/843/885/non_2x/characters-hamburger-hot-dog-coffee-mug-logos-for-fast-food-funny-illustration-for-food-delivery-cartoon-badges-emblems-for-restaurant-and-cafe-mascot-for-the-menu-vector.jpg' />
+                <img src = {HEADER_IMG_URL}/>
             </div>
             <div className = 'header-title'>
                 <h1>Swagiee</h1>

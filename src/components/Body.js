@@ -2,7 +2,7 @@ import Restaurant from "./Restaurant";
 import {restaurants} from '../config/restaurantlist';
 import {useState, useEffect} from 'react';
 
-let Body = () => {
+let Body = ({darkMode}) => {    
 let arr = useState(restaurants);
 let restaurantLists = arr[0];
 let setRestaurantLists = arr[1];
@@ -11,13 +11,22 @@ useEffect( ()=>{
     async function fetchData(){
         let data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4797627&lng=77.5033884&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
         let jsonData = await data.json();
+        let finalArr = [];
 
-        setRestaurantLists(jsonData.data.cards[3].card.card.gridElements.infoWithStyle.restaurants);
+        for(let i = 0; i < jsonData.data.cards.length; i++){
+            let x = jsonData.data.cards[i];
+            if(x.card.card.gridElements.infoWithStyle.restaurants) {
+                finalArr = x.card.card.gridElements.infoWithStyle.restaurants;
+                break;
+            }
+        }
+
+        setRestaurantLists(finalArr);
     }
     fetchData(); 
 },[]);
     return (
-        <div className='restaurant-body'>
+        <div className={`restaurant-body ${darkMode ? 'darkModeOn' : ''}`}>
             <div className='search-bar'>
                 <h4>Search</h4> <input type="text" id="search-bar-input" placeholder="Search for restaurants" onChange={(e)=>{
                     let filteredArr = restaurants.filter((data)=>{

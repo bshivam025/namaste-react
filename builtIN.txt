@@ -10,10 +10,15 @@
 
 2. React.createRoot(document.getElementById('secondary-root')) 
   createRoot() => The createRoot function is a way to establish a new root in your tree. It's like saying, "Hey, I want to start a new section of my app from here. This is used to establish the starting of a app".It is used with root.render.
+
 3. render() => 
  -describes what the component should look like using JSX.
  -converts the h1 tag and puts it as a element in the html page
  -used as root.render(React.createElement('h1', null, 'Hello World'))
 
+4. useState() =>
+- returns 2 parameters in an array,
+- [0]: filtered array
+= [1]: set function
 
 
