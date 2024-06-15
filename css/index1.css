@@ -459,5 +459,32 @@ body, html {
     color: #fff; /* White icon color */
 }
 
+/* login logout button */
+.loginLogoutBtn {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition duration */
+    margin-left: 20px; /* Add margin */
+    margin-top: 10px; /* Add margin */
+  }
+  
+  /* On hover */
+  .loginLogoutBtn:hover {
+    background-color: #45a049; /* Darker green */
+    color: white; /* White text */
+  }
 
+  .Logout {
+    background-color: #FF0000; /* Red background */
+  }
+
+  /* CSS for Login Form */
 /* Swagiee ends */

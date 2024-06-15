@@ -26,8 +26,6 @@ const Footer = ({darkMode, setDarkMode}) => {
         <label className="theme-toggle-label" htmlFor="theme-switch">Dark Mode</label>
         <input type="checkbox" id="theme-switch" onClick={
           ()=>{
-            console.log('clicked');
-            console.log(darkMode);
             setDarkMode(!darkMode);
           }
         } />
