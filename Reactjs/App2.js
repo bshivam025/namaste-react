@@ -35,7 +35,10 @@ let heading5 = <h2 id='h5'>This is heading number 5</h2>
 let mainDiv2 = <div className='title'>{heading4}{heading5}</div>
 root.render(mainDiv2);
 
-//#CASE 3: code using functional component
+//#CASE 3: code using functional component.
+
+// this particular case is known as component compositon.
+// component composition : combining multiple components to create a new component.
 
 let Heading6 = () => {
     return (

@@ -9,7 +9,6 @@ import ReactDOM from 'react-dom/client';
 
 let Restaurant = ({RestaurantName,RestaurantCuisines,RestaurantRating,RestaurantDeliveryTime}) => {
     let classRating = "kuch bhi";
-    console.log(classRating);
     if(RestaurantRating > 4){
         classRating = 'green';
     } else if(RestaurantRating > 3){

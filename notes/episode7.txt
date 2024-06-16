@@ -1,0 +1,34 @@
+Q.1 What is react-router-dom ?
+Ans: React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps UI in sync with the URL.
+
+Q.2 How to use react-router-dom ?
+Ans: To use react-router-dom, you need to install it using npm or yarn. After installing, you can import the required components from the library and use them in your application.
+
+Q.3 What are the main components of react-router-dom ?
+Ans: The main components of react-router-dom are createBrowserRouter, BrowserRouter.
+
+Q.4 What is the use of BrowserRouter in react-router-dom ?
+Ans: BrowserRouter is a component that uses HTML5 history API to keep your UI in sync with the URL. It is the most common router component used in React applications.
+
+example:
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <AppLayout />,
+        errorElement: <Error/>
+    },
+    {
+        path: '/about',
+        element: <About />
+    }
+])
+
+//Rendering
+
+let root = document.getElementById('root');
+root = ReactDOM.createRoot(root);
+root.render(<RouterProvider router = {router} />);
+
+
+Q.5 Difference between react-router-dom and react-router ?
+Ans: React Router is a standard library for routing in React, while React Router DOM is a package that provides DOM bindings for React Router. React Router DOM is used for web applications, while React Router can be used for both web and native applications.

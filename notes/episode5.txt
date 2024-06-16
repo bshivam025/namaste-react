@@ -76,7 +76,9 @@ SURNAME='Nada'
 
 ## Q: What are `React Hooks`?
 A: In React version 16.8, React introduced a new pattern called Hooks. React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
-Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
+Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community. 
+OR 
+React hooks are normal JavaScript Utility functions written by facebook developers which gives you a utility.
 ### React provides a bunch of standard in-built hooks:
 - useState: To manage states. Returns a stateful value and an updater function to update it.
 - useEffect: To manage side-effects like API calls, subscriptions, timers, mutations, and more.
@@ -88,6 +90,25 @@ Hooks allow you to reuse stateful logic without changing your component hierarch
 - useLayoutEffect: It fires at the end of all DOM mutations. It's best to use useEffect as much as possible over this one as the useLayoutEffect fires synchronously.
 - useDebugValue: Helps to display a label in React DevTools for custom hooks.
 
+
+## Q: What is a State Variable?
+A:
+state varibale:  const [varname] = useState([]);
+normal js: const varname;
+State Variable is a very poweful variable which is used to chage the content of a page.
+**** WHENEVER A STATE VARIABLE CHANGES REACT RE-RENDERS THE COMPONENT ***
+
+## Q: Why is React Fast ?
+A: Because react can complete DOM operations fast. It is doing effective dom manipulation because it has a virtual dom, it followes several fast algorithms like diffing algorithm, reconciliation algorithm, etc. to manipulate the DOM faster. this is the core reason why react is fast.
+
+## Q: What is Reconcliation Algorithm? React Fiber?
+A: React uses a diffing algorithm (Reconciliation) that identifies changes in the component tree and makes the necessary updates to the DOM.
+
+## Q: What is Virtual DOM? in simple  words
+A: Virtual DOM is a lightweight copy of the actual DOM. It is a JavaScript object which is a copy of the actual DOM. It is used to increase the speed of the application. It is a copy of the actual DOM.  Virtual dom is a JavaScript object.
+
+## Q: what is Diff Algorithm?
+A: Diffing is the process of comparing two virtual DOMs and figuring out what has changed. Once React knows which virtual DOM objects have changed, then React updates only those objects in the actual DOM.
 
 ## Q: Why do we need `useState Hook`?
 A: `useState hook` is used to maintain the state in our React application. It keeps track of the state changes so basically useState has the ability to encapsulate local state in a functional component.
