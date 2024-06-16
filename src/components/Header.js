@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {HEADER_IMG_URL} from '../config/config';
+import { Link } from 'react-router-dom';
 
 let Header = () => {
     const LoginOutState = useState('Login');
@@ -15,9 +16,9 @@ let Header = () => {
             </div>
             <div className = 'nav-items'>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+                    <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'About'}>About us</Link></li>
+                    <li><Link to={'Contact'}>Contact Us</Link></li>
                     <li>Cart</li>
                     <li><button className={`loginLogoutBtn ${LoginOut}`} onClick={
                         function () {

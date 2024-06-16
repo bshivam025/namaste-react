@@ -1,0 +1,63 @@
+/* RestMenu.css */
+
+/* Container styles */
+.RestMenu {
+    max-width: 900px; /* Adjust max-width as per your design */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Background color for the component */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /* Title and heading styles */
+  .RestMenu h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .RestMenu h3 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  /* Paragraph styles */
+  .RestMenu p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 8px;
+  }
+  
+  /* List styles */
+  .RestMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .RestMenu ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .RestMenu ul li img {
+    width: 100px; /* Larger width for bigger images */
+    height: 100px; /* Larger height for bigger images */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 15px; /* Margin to create space between text and image */
+  }
+  
+  /* Shimmer effect for loading state */
+  .Shimmer {
+    /* Add shimmer effect styles as per your Shimmer component */
+  }
+  

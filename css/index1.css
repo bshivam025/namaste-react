@@ -2,14 +2,17 @@
     color: red;
 }
 
-/* Swagiee begins */
+/* SWAGIEE begins */
 /* CSS for Header Component */
 .header {
     background-color: #FFA500; /* Orange background color */
-    padding: 20px;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .header-title {
@@ -58,8 +61,6 @@ body, html {
     height: 100%;
 }
 
-/* Ensure full-height display */
-/* Ensure full-height display */
 .restaurant-body {
     min-height: 100%;
     display: flex;
@@ -70,7 +71,19 @@ body, html {
 .search-bar {
     padding: 20px;
     background-color: #f8f9fa;
-    text-align: center;
+}
+
+#search-bar-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    outline: none;
+}
+
+#search-bar-input::placeholder {
+    color: #999;
 }
 
 /* Restaurant card styles */
@@ -79,13 +92,15 @@ body, html {
     flex-wrap: wrap;
     justify-content: flex-start; /* Adjust justification */
     padding: 50px;
-    gap: 40px; /* Ensure gap between cards */
+    gap: 20px; /* Ensure gap between cards */
+}
 
+a {
+    text-decoration: none; /* Remove underline from links */
 }
 
 .restaurant-card {
-    width: calc((100% - 60px) / 5); /* Calculate width with 20px gap between each card */
-    max-width: 200px;
+    width: 200px; /* Set a fixed width for the cards */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -97,9 +112,11 @@ body, html {
 .restaurant-card .green {
     color: green;
 }
+
 .restaurant-card .red {
     color: red;
 }
+
 .restaurant-card .orange {
     color: orange;
 }
@@ -110,7 +127,7 @@ body, html {
 
 .restaurant-image img {
     width: 100%;
-    height: 200;
+    height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -135,7 +152,6 @@ body, html {
     color: green; /* Green color for rating */
 }
 
-
 .top-rating-button {
     background-color: #4CAF50; /* Green background */
     border: none; /* No border */
@@ -150,46 +166,37 @@ body, html {
     transition-duration: 0.4s; /* Transition duration */
     margin-left: 20px; /* Add margin */
     margin-top: 10px; /* Add margin */
-  }
-  
-  /* On hover */
-  .top-rating-button:hover {
+}
+
+/* On hover */
+.top-rating-button:hover {
     background-color: #45a049; /* Darker green */
     color: white; /* White text */
-  }
+}
 
-  .white {
+.white {
     background-color: whitesmoke;
     color: #000; /* White text */
+}
 
-  }
-  .top-rating-button.white:hover {
+.top-rating-button.white:hover {
     background-color: #000; /* Darker green */
     color: white; /* White text */
-  }
+}
 
-  .search-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar h4 {
-    margin-right: 10px;
-  }
-  
-  #search-bar-input {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 250px;
-    outline: none;
-  }
-  
-  #search-bar-input::placeholder {
-    color: #999;
-  }
+/* Adjusting for mobile view */
+@media (max-width: 768px) {
+    .restaurant-card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .restaurant-card {
+        width: calc(100% - 20px); /* One card per row */
+    }
+}
+
 
   /* Footer Component */
 .footer {
@@ -200,6 +207,10 @@ body, html {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 .footer-logo img {
@@ -487,4 +498,41 @@ body, html {
   }
 
   /* CSS for Login Form */
+
+
+  /* ERROR PAGE */
+  /* Error.css */
+
+.error-container {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.error-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.error-message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.error-image-container {
+    margin-top: 20px;
+}
+
+.error-doggo-image {
+    max-width: 600px;
+    height: auto;
+    max-height: 450px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
 /* Swagiee ends */

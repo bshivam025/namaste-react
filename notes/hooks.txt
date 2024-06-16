@@ -34,6 +34,10 @@ This file contains the Hooks of react with their definition and example.
         - We have added a button which will increment the state variable value by 1 on click.
         - When the button is clicked, setCount function is called with the updated value of the state variable.
         - The component will re-render with the updated state variable value.
+    1.4 Good Practice :
+        - dont put useState inside a loop, condition or nested function.
+        - always use useState at the top level of the component.
+        - dont use useState out of the functional component. 
 
 2. useEffect :
 
@@ -71,3 +75,37 @@ This file contains the Hooks of react with their definition and example.
         - The document title will be updated with the count value after every render.
         - The component will re-render with the updated state variable value.
         - The useEffect hook will be called after every render to update the document title. 
+
+    2.4 Dependency Array in useEffect: 
+        - The dependency array is an optional argument in the useEffect hook that allows you to optimize the effect by specifying the dependencies that the effect depends on. 
+        - If the dependency array is empty, the effect will only be called once after the initial render. ex -> []
+        - If the dependency array contains values, the effect will be called whenever any of the values in the array change. ex -> [count]
+        - If the dependency array is not provided, the effect will be called after every render. -> 
+        - Example : 
+            ```
+            import React, { useState, useEffect } from 'react';
+
+            function Example() {
+                const [count, setCount] = useState(0);
+
+                // Similar to componentDidMount:
+                useEffect(() => {
+                // Update the document title using the browser API
+                document.title = `You clicked ${count} times`;
+                }, [count]); // Only re-run the effect if count changes(this is the dependency array)
+
+                return (
+                <div>
+                    <p>You clicked {count} times</p>
+                    <button onClick={() => setCount(count + 1)}>
+                    Click me
+                    </button>
+                </div>
+                );
+            }
+            ```
+        - In the above example, we have used useEffect hook with a dependency array containing the count value.
+        - The effect will be called whenever the count value changes.
+        - The document title will be updated with the count value after every render.
+        - The component will re-render with the updated state variable value.
+        - The useEffect hook will be called after every render to update the document title when the count value changes.

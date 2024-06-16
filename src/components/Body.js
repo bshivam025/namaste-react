@@ -1,9 +1,10 @@
 import Restaurant from "./Restaurant";
 import {restaurants} from '../config/restaurantlist';
 import {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 import Shimmer from './Shimmer';
 
-let Body = ({darkMode}) => {    
+let Body = (darkMode = true) => {    
 let [restaurantLists, setRestaurantLists] = useState();
 let [resSearchList, setResSearchList] = useState();
 
@@ -15,7 +16,7 @@ useEffect( ()=>{
 
         for(let i = 0; i < jsonData?.data?.cards?.length; i++){
             let x = jsonData.data.cards[i];
-            if(x.card.card.gridElements.infoWithStyle.restaurants) {
+            if(x.card.card.gridElements?.infoWithStyle.restaurants) {
                 finalArr = x?.card?.card?.gridElements?.infoWithStyle?.restaurants;
                 break;
             }
@@ -29,7 +30,7 @@ useEffect( ()=>{
     return !restaurantLists ? <Shimmer/> : (
         <div className={`restaurant-body ${darkMode ? 'darkModeOn' : ''}`} id="resbody">
             <div className='search-bar'>
-                <h4>Search</h4> <input type="text" id="search-bar-input" placeholder="Search for restaurants" onChange={(e)=>{
+                <input type="text" id="search-bar-input" placeholder="Search for restaurants" onChange={(e)=>{
                     let filteredArr = resSearchList.filter((data)=>{
                        let a = data.info.name.toLowerCase().includes(e.target.value.toLowerCase());
                        let b = data.info.cuisines.join(', ').toLowerCase().includes(e.target.value.toLowerCase());
@@ -79,14 +80,7 @@ useEffect( ()=>{
                 {restaurantLists?.map((restaurantObj) => {
                     let curr = restaurantObj.info;
 
-                    return <Restaurant
-                        key={curr.id}
-                        RestaurantName = {curr.name}
-                        RestaurantCuisines = {curr.cuisines.join(', ')}
-                        RestaurantRating = {curr.avgRating}
-                        RestaurantDeliveryTime = {curr.sla.slaString}
-                        RestaurantImage = {curr.cloudinaryImageId}
-                    />
+                    return <Link key={curr.id}  to={'RestMenu/' + curr.id}><Restaurant RestaurantName = {curr.name} RestaurantCuisines = {curr.cuisines.join(', ')} RestaurantRating = {curr.avgRating} RestaurantDeliveryTime = {curr.sla.slaString} RestaurantImage = {curr.cloudinaryImageId}/></Link>
                 })}
             </div>
         </div>
