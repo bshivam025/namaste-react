@@ -2,7 +2,7 @@ This file contains the Hooks of react with their definition and example.
 
 1. useState
 2. useEffect
-
+3. useParams
 
 1. useState :
 
@@ -109,3 +109,30 @@ This file contains the Hooks of react with their definition and example.
         - The document title will be updated with the count value after every render.
         - The component will re-render with the updated state variable value.
         - The useEffect hook will be called after every render to update the document title when the count value changes.
+    
+    3. useParams :
+        3.1 Definition : It is a utility function which is used to access the parameters from the URL in functional components. It returns an object containing the key-value pairs of the URL parameters. It is given by the react-router-dom library.
+        3.2 Example : 
+            ```
+            import React from 'react';
+            import { useParams } from 'react-router-dom';
+
+            function User() {
+                let { id } = useParams();
+
+                return <h2>User ID: {id}</h2>;
+            }
+            ```
+        3.3 Explanation :
+            - In the above example, we have used useParams hook to access the parameters from the URL in the functional component.
+            - We have imported the useParams hook from the react-router-dom library.
+            - We have used the useParams hook to get the id parameter from the URL.
+            - The id parameter is accessed using the destructuring assignment { id } = useParams().
+            - We have displayed the id parameter in the heading tag.
+            - The component will render with the id parameter value from the URL.
+        3.4 Good Practice :
+            - Always use useParams inside a component that is rendered by a Route component.
+            - Make sure to import useParams from 'react-router-dom' library.
+            - Use destructuring assignment to access the parameters from the URL.
+            - Make sure to define the route with the parameter in the Route component.
+            - Use the parameter value in the component as needed.

@@ -1,0 +1,22 @@
+Objective: The Objective of this file is to note down the steps required to start a new React Project from scratch.
+
+## Steps to start a new React Project from scratch
+
+1. Create a new repository in GitHub
+2. Clone the repository to your local machine
+3. Commands: 
+    - npm init
+    - it will ask some questions, answer them use jest for testing
+    - now package.json file is created
+    - we need a bundler to bundle our code, ex: webpack, parcel, veed, etc
+    - npm install -D parcel (Dev dependency)
+    - npm install react
+    - npm install react-dom
+
+
+
+
+
+
+Q. Difference between npm init and npm init -y?
+A. npm init -y will create a package.json file with default values. npm init will ask for user input to create a package.json file.
