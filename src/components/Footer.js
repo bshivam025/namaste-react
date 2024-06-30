@@ -5,7 +5,7 @@ import {HEADER_IMG_URL} from '../config/config';
 
 const Footer = ({darkMode, setDarkMode}) => {
   return (
-    <div className="footer flex justify-between bg-orange-400 shadow-lg mb-0 h-20">
+    <div className="footer flex justify-between bg-orange-400 shadow-lg mb-0 h-20 w-full bottom-0">
       <div className="footer-logo w-24 mt-4 ml-4">
         <img src={HEADER_IMG_URL} alt="Logo" />
       </div>
@@ -17,7 +17,7 @@ const Footer = ({darkMode, setDarkMode}) => {
           <li><a href="#about">About Us</a></li>
         </ul>
       </div> */}
-      <div className="footer-social-icons">
+      <div className="footer-social-icons w-auto">
         <a href="#facebook"><i className="fab fa-facebook-f"></i></a>
         <a href="#twitter"><i className="fab fa-twitter"></i></a>
         <a href="#instagram"><i className="fab fa-instagram"></i></a>

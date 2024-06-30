@@ -76,7 +76,6 @@ const Body = ({ darkMode = true }) => {
             <div className="restaurant-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
                 {restaurantLists?.map((restaurantObj) => {
                     let curr = restaurantObj.info;
-                    console.log("🫡 ~ {restaurantLists?.map ~ curr:", curr);
                     return (
                         <Link key={curr.id}  to={'RestMenu/' + curr.id} className="transform transition duration-300 hover:scale-105">
                             <RestaurantCardModify RestaurantName={curr.name} RestaurantCuisines={curr.cuisines.join(', ')} RestaurantRating={curr.avgRating} RestaurantDeliveryTime={curr.sla.slaString} RestaurantImage={curr.cloudinaryImageId} />

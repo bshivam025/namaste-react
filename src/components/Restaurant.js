@@ -11,11 +11,11 @@ const Restaurant = ({ RestaurantName, RestaurantCuisines, RestaurantRating, Rest
     }
 
     return (
-        <div className='restaurant-card bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl mb-12 mt-2 w-3/4 h-fit min-h-40 flex flex-col justify-between'>
-            <div className='restaurant-image mb-4 h-4/5'>
+        <div className='restaurant-card bg-white p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl mb-12 mt-2 w-3/4 flex flex-col justify-between'>
+            <div className='restaurant-image mb-4 h-8/12'>
                 <img src={IMG_CDN_URL + RestaurantImage} alt={RestaurantName} className='w-full h-full object-cover rounded-lg' />
             </div>
-            <div className='restaurant-info flex-grow flex flex-col justify-between'>
+            <div className='restaurant-info flex-grow flex flex-col justify-between h-4/12'>
                 <div>
                     <div className='restaurant-name mb-2'>
                         <h3 className='text-lg text-gray-600 font-semibold truncate'>{RestaurantName}</h3>
