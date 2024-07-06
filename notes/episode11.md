@@ -1,2 +1,10 @@
 Q1. What is a Higher order component (HOC) in React ?
 Ans: A Higher Order Component (HOC) is a function that takes a component and returns a new component with additional functionality. HOCs are used to share common functionality between components without repeating code. They are a pattern in React that allows you to reuse code and logic across multiple components.
+Q2. Difference between Controlled and Uncontrolled components in React ?
+Ans: Controlled components are components that store their state in the parent component and are controlled by the parent component. The parent component passes the state and the event handlers to the controlled component as props. The controlled component does not have its own state and relies on the parent component to manage its state.
+Q3. Lifting State up in React ?
+Ans: Lifting state up is a technique in React where you move the state from a child component to a parent component. This allows you to share the state between multiple components and keep the state in sync. Lifting state up is useful when you have multiple components that need to share the same state or when you want to keep the state in a higher level component to make it easier to manage.
+Q4. What is props drilling in React ?
+Ans: Props drilling is a term used in React to describe the process of passing props down from a parent component to a child component. When you have multiple levels of nested components, you may need to pass props through multiple levels of components to get them to the component where they are needed. This can lead to a lot of boilerplate code and make it difficult to manage the props. Props drilling can be avoided by using context or by lifting state up to a higher level component.
+Q5. What is React Context ?
+Ans: React Context is a feature in React that allows you to share data between components without having to pass props through multiple levels of components. Context provides a way to pass data down the component tree without having to explicitly pass props to each component. Context is useful when you have data that needs to be accessed by multiple components at different levels of the component tree.

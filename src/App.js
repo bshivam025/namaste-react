@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header';  
 import Body from './components/Body';
@@ -7,18 +7,29 @@ import About from './components/About';
 import Error from './components/Error';
 import Contact from './components/Contact';
 import RestMenu from './components/RestMenu';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import UserContext from './utils/userContext';
 
 // SWAGIEE begins
 
 let AppLayout = () => {
+    
+    let [UserName, setUserName] = useState('');
+    useEffect(()=>{
+        let data = {
+            name: "Shivam Bhardwaj"
+        }
+        setUserName(data.name);
+    }, [])
     let darkModeLocal = localStorage.getItem('darkMode') || false;
     let [darkMode, setDarkMode] = useState(Boolean(darkModeLocal));
 
     return (
         <div className = 'app'>
+        <UserContext.Provider value = {{loggenInUser: UserName}}>
             <Header />
+        </UserContext.Provider>
             <Outlet/>
             <Footer darkMode = {darkMode} setDarkMode = {setDarkMode} />
         </div>

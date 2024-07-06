@@ -3,8 +3,10 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { REST_MENU_IMG_URL } from '../config/config';
 import Shimmer from './Shimmer';
 import RestaurantCategory from "./RestaurantCategory";
+import {useState} from 'react';
 
 const RestMenu = () => {
+    let [showItems, setShowItems] = useState(null);
     let { restId } = useParams();
     let menu = useRestaurantMenu(restId);
 
@@ -31,8 +33,8 @@ const RestMenu = () => {
             <hr className="h-0.5 my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <h3 className="text-center text-3xl font-bold mb-4 underline underline-offset-8">- Menu -</h3>
             {
-                categories.map( (category) => {
-                    return (<RestaurantCategory key = {category?.card?.card?.title} props = {category?.card?.card}/>)
+                categories.map( (category, index) => {
+                    return (<RestaurantCategory key = {category?.card?.card?.title} props = {category?.card?.card} showItems = {showItems === index ? true:false} setShowItems = {()=> setShowItems(index)}/>)
                 })
             }
         </div>

@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { HEADER_IMG_URL } from '../config/config';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import { AiOutlineShoppingCart, AiOutlineHome, AiOutlineInfoCircle, AiOutlineContacts } from 'react-icons/ai';
+import UserContext from '../utils/userContext';
 
 const Header = () => {
   const [LoginOut, setLoginOut] = useState('Login');
   const onlineStatus = useOnlineStatus();
+  const {loggenInUser} = useContext(UserContext);
+  console.log("🫡 ~ Header ~ loggenInUser:", loggenInUser);
 
   return (
     <div className='header flex justify-between items-center p-4 bg-orange-400 shadow-lg'>
@@ -52,6 +55,11 @@ const Header = () => {
             >
               {LoginOut}
             </button>
+          </li>
+          <li className='px-1'>
+            <div className='flex items-center space-x-1 hover:text-white transition'>
+              <span>{loggenInUser}</span>
+            </div>
           </li>
         </ul>
       </div>

@@ -1,6 +1,9 @@
 import { IMG_CDN_URL } from '../config/config.js';
+import { useContext } from 'react';
+import UserContext from '../utils/userContext';
 
 const Restaurant = ({ RestaurantName, RestaurantCuisines, RestaurantRating, RestaurantDeliveryTime, RestaurantImage }) => {
+    const { loggenInUser } = useContext(UserContext);
     let classRating = "text-gray-500";
     if (RestaurantRating > 4) {
         classRating = 'text-green-500';
@@ -31,6 +34,10 @@ const Restaurant = ({ RestaurantName, RestaurantCuisines, RestaurantRating, Rest
                     <div className='restaurant-delivery-time'>
                         <h4 className='text-gray-600'>{RestaurantDeliveryTime}</h4>
                     </div>
+                    <div className='restaurant-delivery-time'>
+                        <h4 className='text-gray-600'>User: {loggenInUser}</h4>
+                    </div>
+
                 </div>
             </div>
         </div>
