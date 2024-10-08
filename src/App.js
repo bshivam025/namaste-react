@@ -5,11 +5,14 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 import About from './components/About';
 import Error from './components/Error';
+import Cart from './components/Cart';
 import Contact from './components/Contact';
 import RestMenu from './components/RestMenu';
 import { useState, useContext } from 'react';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import UserContext from './utils/userContext';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 // SWAGIEE begins
 
@@ -26,13 +29,15 @@ let AppLayout = () => {
     let [darkMode, setDarkMode] = useState(Boolean(darkModeLocal));
 
     return (
-        <div className = 'app'>
-        <UserContext.Provider value = {{loggenInUser: UserName}}>
-            <Header />
-        </UserContext.Provider>
-            <Outlet/>
-            <Footer darkMode = {darkMode} setDarkMode = {setDarkMode} />
-        </div>
+        <Provider store={appStore}>
+            <div className='app'>
+                <UserContext.Provider value={{ loggenInUser: UserName }}>
+                    <Header />
+                </UserContext.Provider>
+                <Outlet />
+                <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
+            </div>
+        </Provider>
     )
 }
 
@@ -58,6 +63,10 @@ const router = createBrowserRouter([
             {
                 path: '/RestMenu/:restId',
                 element: <RestMenu />
+            },
+            {
+                path: '/cart',
+                element: <Cart/>
             }
         ],
         errorElement: <Error/>

@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import { AiOutlineShoppingCart, AiOutlineHome, AiOutlineInfoCircle, AiOutlineContacts } from 'react-icons/ai';
 import UserContext from '../utils/userContext';
+import { useSelector } from 'react-redux';
+
 
 const Header = () => {
   const [LoginOut, setLoginOut] = useState('Login');
   const onlineStatus = useOnlineStatus();
   const {loggenInUser} = useContext(UserContext);
-  console.log("🫡 ~ Header ~ loggenInUser:", loggenInUser);
+  const cart = useSelector((store) => store.cart.items)
+  console.log("🫡 ~ Header ~ cart:", cart);
 
   return (
     <div className='header flex justify-between items-center p-4 bg-orange-400 shadow-lg'>
@@ -44,8 +47,10 @@ const Header = () => {
           </li>
           <li className='px-1'>
             <div className='flex items-center space-x-1 hover:text-white transition'>
+            <Link to='/Cart' className='flex items-center space-x-1 hover:text-white transition'>
               <AiOutlineShoppingCart className='text-xl' />
-              <span>Cart</span>
+              <span>Cart {cart.length > 0 ? '('+cart.length+ ')': ''}</span>
+            </Link>
             </div>
           </li>
           <li className='px-1'>
